@@ -1,4 +1,4 @@
-package xyz.txcplus.redis.config;
+package xyz.txcplus.redis.service;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;

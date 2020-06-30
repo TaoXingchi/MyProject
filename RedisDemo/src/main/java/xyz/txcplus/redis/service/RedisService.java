@@ -1,4 +1,4 @@
-package xyz.txcplus.redis.config;
+package xyz.txcplus.redis.service;
 
 /**
  * @author: TXC
