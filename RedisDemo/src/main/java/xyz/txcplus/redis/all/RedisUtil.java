@@ -558,7 +558,7 @@ public class RedisUtil {
         redisTemplate.convertAndSend(channel,message);
     }
 
-
+///
     //=========BoundListOperations 用法 start============
 
     /**
