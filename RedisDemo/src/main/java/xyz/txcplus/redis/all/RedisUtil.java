@@ -548,7 +548,7 @@ public class RedisUtil {
     public Set keys(String pattern){
         return redisTemplate.keys(pattern);
     }
-
+////
     /**
      * 使用Redis的消息队列
      * @param channel
