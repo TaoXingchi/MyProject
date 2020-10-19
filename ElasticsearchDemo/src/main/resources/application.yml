@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-es-demo
+  elasticsearch:
+    rest:
+      username: user
+      password: 123456
+      uris: https://127.0.0.1:9200
