@@ -31,10 +31,10 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
+    @Cacheable(value = "code",key = "#telephone")
     public String getCode(String telephone) {
-        String code = "null";
+        String code = "hhhhhhh";
         System.out.println("hhhhhhh");
-        code = (String) cacheService.get("code",telephone);
         return code;
     }
 }

@@ -1,5 +1,6 @@
 package xyz.txcplus.ehcachedemo.controller;
 
+import net.sf.ehcache.CacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,8 @@ public class DemoController {
     public String sendCode(String telephone){
         return demoService.sendCode(telephone);
     }
-
+    @Autowired
+    private CacheManager cacheManager;
     @GetMapping("getCode")
     public String getCode(String telephone){
         return demoService.getCode(telephone);
