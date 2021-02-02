@@ -13,5 +13,7 @@ public class TestVo {
         vo.setDateType(Vo.DateType.YEAR);
         Vo.DateType datetype = vo.getDateType();
         System.out.println(Vo.DateType.YEAR.equals(datetype));
+        Double percent = Double.parseDouble("3.2");
+        System.out.println(percent);
     }
 }

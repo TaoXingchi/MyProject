@@ -1,0 +1,23 @@
+mysqlServer:
+  ip: 49.234.89.124
+  host: 49.234.89.124
+  port: 3306
+  database: smart_union_system
+  username: root
+  password: 123456
+
+
+#mysqlServer:
+#  ip: localhost
+#  host: localhost
+#  port: 3306
+#  database: smart_union_system
+#  username: root
+#  password: 123456
+
+
+application:
+  #版本
+  version: 1.0.0
+  #文件上传路径
+  profile: C:/profile/

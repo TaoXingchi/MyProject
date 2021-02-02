@@ -1,0 +1,49 @@
+
+spring:
+ servlet:
+  multipart:
+   max-file-size: 30MB
+   max-request-size: 50MB
+ thymeleaf:
+  cache: false
+ profiles:
+  active: dev,common
+ application:
+  name: web-socket
+ web:
+  resources:
+   static-locations: classpath:/META-INF/resources/,classpath:/static/,classpath:/public/,classpath:/resources/,classpath:/templates/,classpath:/mapper/
+
+
+
+server:
+ port: 10630
+ tomcat:
+  uri-encoding: utf-8
+ servlet:
+  encoding:
+   charset: utf-8
+   enabled: true
+   force: true
+
+
+#整合mybatis-plus
+mybatis-plus:
+ global-config:
+  db-config:
+   id-type: auto
+   field-strategy: not_empty
+   #驼峰下划线转换
+   column-underline: true
+   #逻辑删除配置
+   logic-delete-field: deleted  #全局逻辑删除字段值
+   logic-delete-value: 1  #默认删除
+   logic-not-delete-value: 0 #默认未删除
+   db-type: mysql
+  refresh: false
+ configuration:
+  map-underscore-to-camel-case: true
+  cache-enabled: false
+ type-aliases-package: xyz.txcplus.websocket.entity
+ mapper-locations: classpath:mapper/*.xml
+
