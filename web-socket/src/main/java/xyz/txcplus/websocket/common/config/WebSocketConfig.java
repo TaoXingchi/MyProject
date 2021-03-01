@@ -14,25 +14,30 @@ import org.springframework.web.socket.config.annotation.WebSocketTransportRegist
 import java.util.List;
 
 /**
- * ClassName: WebSocketConfig
+ * 配置WebSocket
  * Description:
  * date: 2020/12/15 17:05
  *
  * @author TXC
  */
 @Configuration
+// 注解开启使用STOMP协议来传输基于代理(message broker)的消息,这时控制器支持使用@MessageMapping,就像使用@RequestMapping一样
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
+        //点对点应配置一个/user消息代理，广播式应配置一个/topic消息代理
         config.enableSimpleBroker("/topic");
+        //点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/user/
         config.setApplicationDestinationPrefixes("/app");
     }
 
+
+    // 注册STOMP协议的节点(endpoint),并映射指定的url
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/gs-guide-websocket").withSockJS();
+        registry.addEndpoint("/gs-guide-websocket").setAllowedOrigins("*").withSockJS();
     }
 
     // 配置发送与接收的消息参数，可以指定消息字节大小，缓存大小，发送超时时间

@@ -1,3 +1,7 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 /**
  * ClassName: test <br/>
  * Description: <br/>
@@ -18,8 +22,11 @@ public class test {
     }
 
     public static void main(String[] args) {
-        String str = "510010";
-        String t = str.replaceAll("(00){1,}$", "");
-        System.out.println(t);
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime time = LocalDateTime.now();
+        String localTime = df.format(time);
+        LocalDateTime ldt = LocalDateTime.parse("2021-02-21 17:07:05", df);
+        System.out.println("LocalDateTime转成String类型的时间：" + localTime);
+        System.out.println("String类型的时间转成LocalDateTime：" + ldt.getDayOfWeek().getValue());
     }
 }

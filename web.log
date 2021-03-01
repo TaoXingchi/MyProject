@@ -1,0 +1,23 @@
+2021-02-23 12:01:21.859  INFO 11752 --- [main] x.t.websocket.WebSocketApplication       : Starting WebSocketApplication using Java 1.8.0_73 on DZ-218 with PID 11752 (D:\dev\Project\MyProject\web-socket\target\classes started by TXC in D:\dev\Project\MyProject)
+2021-02-23 12:01:21.861  INFO 11752 --- [main] x.t.websocket.WebSocketApplication       : The following profiles are active: dev,common
+2021-02-23 12:01:22.636  WARN 11752 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[xyz.txcplus.websocket]' package. Please check your configuration.
+2021-02-23 12:01:23.017  INFO 11752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10630 (http)
+2021-02-23 12:01:23.026  INFO 11752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-23 12:01:23.027  INFO 11752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-23 12:01:23.147  INFO 11752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-23 12:01:23.147  INFO 11752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
+2021-02-23 12:01:23.295  INFO 11752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-02-23 12:01:23.306  INFO 11752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-02-23 12:01:23.317  INFO 11752 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-02-23 12:01:23.394  INFO 11752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2021-02-23 12:01:23.626  INFO 11752 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2021-02-23 12:01:24.576  INFO 11752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10630 (http) with context path ''
+2021-02-23 12:01:24.578  INFO 11752 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2021-02-23 12:01:24.579  INFO 11752 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@84f0d9]]
+2021-02-23 12:01:24.579  INFO 11752 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2021-02-23 12:01:24.592  INFO 11752 --- [main] x.t.websocket.WebSocketApplication       : Started WebSocketApplication in 3.298 seconds (JVM running for 4.009)
+2021-02-23 12:01:47.566  INFO 11752 --- [http-nio-10630-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-23 12:01:47.566  INFO 11752 --- [http-nio-10630-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-23 12:01:47.567  INFO 11752 --- [http-nio-10630-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-23 12:02:23.414  INFO 11752 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-02-23 12:32:23.392  INFO 11752 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
