@@ -12,10 +12,10 @@ import java.io.File;
  */
 public class Demo {
     public static void main(String[] args) {
-
-
+        System.out.println(System.getProperty("user.dir"));
+        /*;
         PdfConverter wordConverter = new WordToPdfConverter();
         wordConverter.convert(new File("F:\\四川\\停车场数据获取接口.doc"),
-                new File("F:\\四川\\停车场数据获取接口.pdf"));
+                new File("F:\\四川\\停车场数据获取接口.pdf"));*/
     }
 }
