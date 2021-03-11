@@ -1,9 +1,5 @@
 package top.solove.convert2pdf.demo;
 
-import top.solove.convert2pdf.components.impl.WordToPdfConverter;
-import top.solove.convert2pdf.util.PdfConverter;
-
-import java.io.File;
 
 /**
  * @author TXC
