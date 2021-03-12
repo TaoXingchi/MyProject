@@ -154,7 +154,8 @@ public class OfficeToHtml {
                     listName.add(readFile.getName());
                 } else {
                     readFile.isDirectory();
-                    readAllFile(filepath + "/" + fileList[i]);//递归
+                    // 递归
+                    readAllFile(filepath + "/" + fileList[i]);
                 }
             }
         }
