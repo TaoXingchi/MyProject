@@ -1,10 +1,4 @@
-mysqlServer:
-  ip: 49.234.89.124
-  host: 49.234.89.124
-  port: 3306
-  database: smart_union_system
-  username: root
-  password: 123456
+
 
 
 #mysqlServer:
