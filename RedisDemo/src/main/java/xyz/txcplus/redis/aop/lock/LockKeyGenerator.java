@@ -3,9 +3,7 @@ package xyz.txcplus.redis.aop.lock;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.digest.DigestUtil;
-import com.sun.deploy.util.ArrayUtil;
 import org.aopalliance.intercept.MethodInvocation;
-import org.junit.platform.commons.util.StringUtils;
 import org.springframework.context.expression.MethodBasedEvaluationContext;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
@@ -43,14 +41,14 @@ public class LockKeyGenerator {
     public String getKeyName(MethodInvocation invocation, LockResource lockResource) {
         StringBuilder key = new StringBuilder();
         Method method = invocation.getMethod();
-        if (StringUtils.isNotBlank(lockResource.resourceName())) {
+        if (StrUtil.isNotBlank(lockResource.resourceName())) {
             // 指定了资源名称采用指定值
             key.append(lockResource.resourceName());
         } else {
             // 未指定资源名称采用 类完整名称+方法名称
             key.append(method.getDeclaringClass().getName()).append(".").append(method.getName());
         }
-        if (StringUtils.isNotBlank(lockResource.key())) {
+        if (StrUtil.isNotBlank(lockResource.key())) {
             // 指定key值 采用指定值
             key.append(":");
             key.append(getSpelDefinitionKey(lockResource.key(), method, invocation.getArguments()));

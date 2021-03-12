@@ -5,6 +5,8 @@ import org.redisson.api.RedissonClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import xyz.txcplus.redis.aop.lock.aop.LockAnnotationAdvisor;
+import xyz.txcplus.redis.aop.lock.aop.LockInterceptor;
 
 /**
  * 资源锁配置
