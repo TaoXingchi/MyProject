@@ -10,6 +10,7 @@ import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
+import xyz.txcplus.redis.aop.lock.annotation.LockResource;
 
 import java.lang.reflect.Method;
 

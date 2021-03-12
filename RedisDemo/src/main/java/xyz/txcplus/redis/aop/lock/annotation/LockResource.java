@@ -1,6 +1,8 @@
 package xyz.txcplus.redis.aop.lock.annotation;
 
-import com.daqsoft.lock.FailureHandleType;
+
+
+import xyz.txcplus.redis.aop.lock.FailureHandleType;
 
 import java.lang.annotation.*;
 import java.util.concurrent.TimeUnit;

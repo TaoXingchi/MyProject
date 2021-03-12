@@ -1,6 +1,6 @@
 package xyz.txcplus.redis.aop.lock.aop;
 
-import com.daqsoft.lock.annotation.LockResource;
+
 import lombok.NonNull;
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
@@ -9,6 +9,7 @@ import org.springframework.aop.support.annotation.AnnotationMatchingPointcut;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
+import xyz.txcplus.redis.aop.lock.annotation.LockResource;
 
 /**
  * 分布式锁aop通知

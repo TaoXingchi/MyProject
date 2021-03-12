@@ -1,16 +1,15 @@
 package xyz.txcplus.redis.aop.lock.aop;
 
-import com.daqsoft.config.constant.MessageConstant;
-import com.daqsoft.config.exception.RrException;
-import com.daqsoft.lock.FailureHandleType;
-import com.daqsoft.lock.LockKeyGenerator;
-import com.daqsoft.lock.annotation.LockResource;
+
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import xyz.txcplus.redis.aop.lock.FailureHandleType;
+import xyz.txcplus.redis.aop.lock.LockKeyGenerator;
+import xyz.txcplus.redis.aop.lock.annotation.LockResource;
 
 /**
  * 分布式锁aop处理器
@@ -56,9 +55,9 @@ public class LockInterceptor implements MethodInterceptor {
             }
         } else {
             log.debug("当前线程:" + Thread.currentThread().getName() + "获取锁失败：" + keyName);
-            if (FailureHandleType.ERROR.equals(lockResource.failureHandleType())) {
-                throw new RrException(MessageConstant.RESOURCE_PREEMPTED_FAILURE);
-            }
+//            if (FailureHandleType.ERROR.equals(lockResource.failureHandleType())) {
+//                throw new RrException(MessageConstant.RESOURCE_PREEMPTED_FAILURE);
+//            }
         }
         return null;
     }
