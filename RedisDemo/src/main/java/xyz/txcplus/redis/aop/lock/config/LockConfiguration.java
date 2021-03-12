@@ -1,7 +1,6 @@
 package xyz.txcplus.redis.aop.lock.config;
 
-import com.daqsoft.lock.aop.LockAnnotationAdvisor;
-import com.daqsoft.lock.aop.LockInterceptor;
+
 import org.redisson.api.RedissonClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
